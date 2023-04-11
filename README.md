@@ -43,4 +43,4 @@ $ node ./code/core.js ./test/file.txt
 
 ## References
 
-- Rever commit
+- Revert-commit
