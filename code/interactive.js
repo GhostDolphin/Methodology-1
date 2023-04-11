@@ -11,12 +11,11 @@ const rl = readline.createInterface({
 const getInteractive = () => {
   let values = [];
 
-  // Get a value
   rl.setPrompt('Input a, b and c. Separate them with spaces (e.g. 1 2 3):');
   rl.prompt();
 
   rl.on('line', function(input) {
-    const divInput = input.split(/\s+/).map(item => parseFloat(item.toString()));
+    const divInput = input.split(' ').map(item => parseFloat(item.toString()));
 
     if (divInput.length !== 3) {
       console.log('The quantity of numbers is incorrect. Try again.');

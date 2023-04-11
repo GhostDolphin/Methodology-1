@@ -6,3 +6,5 @@ import { getDisc, calculate } from './calc.js';
 
 // Check which mode is to be utilised and retrieve corresponding values
 const values = (process.argv.length < 3) ? getInteractive() : getUninteractive();
+
+console.log(values);
