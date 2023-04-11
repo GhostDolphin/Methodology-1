@@ -11,9 +11,13 @@ const getUninteractive = () => {
     process.exit(0);
   }
 
-  const data = readFileSync(pathTo).toString().trim('\n');
+  const data = readFileSync(pathTo).toString();
+  if (!(data.indexOf('\\n') > -1)) {
+    console.log('Incorrect input file format. Try again.');
+    process.exit(400);
+  }
 
-  const values = data.split(' ').map(item => parseFloat(item.toString()));
+  const values = data.trim('\n').split(' ').map(item => parseFloat(item.toString()));
 
   if (values.length !== 3) {
     console.log('Incorrect input file format. Try again.');
@@ -32,7 +36,7 @@ const getUninteractive = () => {
     }
   }
 
-  return { a: values[0], b: values[1], c: values[2] };
+  return values;
 };
 
 export { getUninteractive };

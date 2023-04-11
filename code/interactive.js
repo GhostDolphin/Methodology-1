@@ -41,7 +41,7 @@ const getInteractive = () => {
     process.exit(0);
   });
 
-  return { a: values[0], b: values[1], c: values[2] };
+  return values;
 };
 
 export { getInteractive };
