@@ -18,7 +18,7 @@ const getUninteractive = () => {
     process.exit(400);
   }
 
-  const values = data.trim('\n').split(' ').map(item => parseFloat(item.toString()));
+  const values = data.trim('\n').split('\s').map(item => parseFloat(item.toString()));
 
   if (values.length !== 3) {
     console.log('Incorrect input file format. Try again.');
