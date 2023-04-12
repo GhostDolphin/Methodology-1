@@ -1,6 +1,7 @@
 'use strict';
 
 import * as readline from 'readline';
+import { solveExec } from './exec.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -11,7 +12,7 @@ const rl = readline.createInterface({
 const getInteractive = () => {
   let values = [];
 
-  rl.setPrompt('Input a, b and c. Separate them with spaces (e.g. 1 2 3):');
+  rl.setPrompt('Input a, b and c. Separate them with spaces (e.g. 1 2 3): ');
   rl.prompt();
 
   rl.on('line', function(input) {
@@ -38,6 +39,7 @@ const getInteractive = () => {
     }
   }).on('close', function() {
     console.log(`a = ${values[0]}; b = ${values[1]}; c = ${values[2]}`);
+    solveExec(values);
     process.exit(0);
   });
 

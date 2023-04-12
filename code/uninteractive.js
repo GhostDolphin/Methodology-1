@@ -1,6 +1,7 @@
 'use strict';
 
 import { existsSync, readFileSync } from 'fs';
+import { solveExec } from './exec.js';
 
 // Get values from the uninteractive mode
 const getUninteractive = () => {
@@ -35,6 +36,8 @@ const getUninteractive = () => {
       process.exit(400);
     }
   }
+
+  solveExec(values);
 
   return values;
 };
