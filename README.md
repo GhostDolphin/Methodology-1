@@ -43,4 +43,4 @@ $ node ./code/core.js ./test/file.txt
 
 ## References
 
-- Revert-commit
+- [Revert-commit](https://github.com/GhostDolphin/Methodology-1/commit/8b2a4d6a509e38e1a4f6d0b541e3b71116ce6747)
