@@ -21,5 +21,4 @@ const solveExec = params => {
   }
 };
 
-//s
 export { solveExec };
